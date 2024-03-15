@@ -12,12 +12,11 @@ import org.openqa.selenium.support.ui.Select;
 public class TreeSetDropdown {
 
 	
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("file:///C:/Users/gulsh/OneDrive/Desktop/dropdown.html");
-		Thread.sleep(2000);
 		WebElement dropdown = driver.findElement(By.id("dropdown"));
 		
 		Select s1 = new Select(dropdown);
@@ -27,7 +26,6 @@ public class TreeSetDropdown {
 		TreeSet<String> t1= new TreeSet<String>();
 		
 		for(int i=0;i<opt.size();i++) {
-			
 			String option = opt.get(i).getText();
 			t1.add(option);
 		}
