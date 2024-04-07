@@ -18,6 +18,6 @@ public class FileUploadWithAutoIT {
 		driver.findElement(By.xpath("//div[text()='Upload File']")).click();
 		
 		Thread.sleep(2000);
-		Runtime.getRuntime().exec("./AutoIT/A2File.exe");
+		Runtime.getRuntime().exec("./AutoIT/A3.exe");
 	}
 }
