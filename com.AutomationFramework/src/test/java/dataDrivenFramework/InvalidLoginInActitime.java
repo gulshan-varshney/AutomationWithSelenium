@@ -21,7 +21,7 @@ public class InvalidLoginInActitime {
 		
 		int rowCount = lib.getRowCount("./src/test/resources/ActiTimeData.xlsx", "InvalidData");
 		
-		for(int i=0;i<=rowCount;i++) {
+		for(int i=1;i<=rowCount;i++) {
 			
 			String username = lib.getDataFromExcelFile("./src/test/resources/ActiTimeData.xlsx", "InvalidData", i, 0);
 			String password = lib.getDataFromExcelFile("./src/test/resources/ActiTimeData.xlsx", "InvalidData", i, 1);
@@ -29,6 +29,7 @@ public class InvalidLoginInActitime {
 			driver.findElement(By.name("username")).sendKeys(username);
 			driver.findElement(By.name("pwd")).sendKeys(password);
 			driver.findElement(By.id("loginButton")).click();
+			driver.findElement(By.name("username")).clear();
 		}
 	}
 }
