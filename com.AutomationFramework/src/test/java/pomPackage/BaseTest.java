@@ -1,4 +1,4 @@
-package keyWordDrivenFramework;
+package pomPackage;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -36,40 +36,36 @@ public class BaseTest implements IAutoConstant{
 	}
 	
 	// login
-	public void login() throws IOException {
-		
-		Flib lib = new Flib();
-		String username = lib.getDataFromPropertyFile(propPath, "username");
-		String pwd = lib.getDataFromPropertyFile(propPath, "password");
-		driver.findElement(By.name("username")).sendKeys(username);
-		driver.findElement(By.name("pwd")).sendKeys(pwd,Keys.ENTER);
-	}
+//	public void login() throws IOException {
+//		
+//		Flib lib = new Flib();
+//		String username = lib.getDataFromPropertyFile(propPath, "username");
+//		String pwd = lib.getDataFromPropertyFile(propPath, "password");
+//		driver.findElement(By.name("username")).sendKeys(username);
+//		driver.findElement(By.name("pwd")).sendKeys(pwd,Keys.ENTER);
+//	}
 	// logout
 	public void logout() {
 		driver.findElement(By.xpath("//a[text()='Logout']")).click();
 	}
 	
 	// create user
-	public void createUser() {
+//	public void createUser() {
+//		
+//		Random r = new Random();
+//		int no = r.nextInt(10000);
+//		
+//		driver.findElement(By.xpath("(//img[@class='sizer'])[3]")).click();
+//		driver.findElement(By.xpath("//input[@value='Create New User']")).click();
+//		driver.findElement(By.name("username")).sendKeys("Manager"+no);
+//		driver.findElement(By.name("passwordText")).sendKeys("Manager@123");
+//		driver.findElement(By.name("passwordTextRetype")).sendKeys("Manager@123");
+//		driver.findElement(By.name("firstName")).sendKeys("Captain");
+//		driver.findElement(By.name("lastName")).sendKeys("America");
+//		driver.findElement(By.xpath("//input[@value='   Create User   ']")).click();
 		
-		Random r = new Random();
-		int no = r.nextInt(10000);
-		
-		driver.findElement(By.xpath("(//img[@class='sizer'])[3]")).click();
-		driver.findElement(By.xpath("//input[@value='Create New User']")).click();
-		driver.findElement(By.name("username")).sendKeys("Manager"+no);
-		driver.findElement(By.name("passwordText")).sendKeys("Manager@123");
-		driver.findElement(By.name("passwordTextRetype")).sendKeys("Manager@123");
-		driver.findElement(By.name("firstName")).sendKeys("Captain");
-		driver.findElement(By.name("lastName")).sendKeys("America");
-		driver.findElement(By.xpath("//input[@value='   Create User   ']")).click();
-		
-	}
+//	}
 	
-	//create new customer
-	public void newCustomer() {
-		
-	}
 	// close the browser
 	public void tearDown() {
 		driver.quit();
