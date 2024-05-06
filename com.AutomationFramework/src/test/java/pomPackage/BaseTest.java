@@ -45,9 +45,9 @@ public class BaseTest implements IAutoConstant{
 //		driver.findElement(By.name("pwd")).sendKeys(pwd,Keys.ENTER);
 //	}
 	// logout
-	public void logout() {
-		driver.findElement(By.xpath("//a[text()='Logout']")).click();
-	}
+//	public void logout() {
+//		driver.findElement(By.xpath("//a[text()='Logout']")).click();
+//	}
 	
 	// create user
 //	public void createUser() {
