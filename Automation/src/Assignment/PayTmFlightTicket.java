@@ -34,7 +34,7 @@ public static void main(String[] args) throws InterruptedException {
 	
 	//select date
 	driver.findElement(By.id("departureDate")).click();
-	driver.findElement(By.xpath("//div[text()='12'][1]")).click();
+	driver.findElement(By.xpath("(//div[text()='12'])[2]")).click();
 	
 	//search flight
 	driver.findElement(By.xpath("//button[@class='rippleButton']")).click();
@@ -58,5 +58,6 @@ public static void main(String[] args) throws InterruptedException {
 	for (int i = 0; i < flightName.size(); i++) {
 		System.out.println(flightName.get(i).getText()+"---->"+flightPrice.get(i).getText());
 	}
+	driver.quit();
 }
 }

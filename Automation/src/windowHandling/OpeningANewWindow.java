@@ -2,6 +2,7 @@ package windowHandling;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,5 +19,6 @@ public class OpeningANewWindow {
 		// open a new blank window
 		driver.switchTo().newWindow(WindowType.WINDOW);
 		driver.get("https://www.swiggy.com");
+		driver.findElement(By.linkText("Help")).click();
 	}
 }
